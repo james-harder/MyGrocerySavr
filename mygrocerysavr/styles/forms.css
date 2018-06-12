@@ -1,0 +1,11 @@
+﻿.left {
+    display: inline-block;
+    width: 175px;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.formButton {
+    left: 200px;
+    position: relative;
+}

@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MJGrocersMaster.master.cs" Inherits="MasterPages_MJGrocersMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Welcome to MJ Grocers</title>
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="../styles/MasterStyleSmall.css">
+	<link rel="stylesheet" media="screen and (min-width: 640px)" href="../styles/MasterStyleLarge.css">  
+    <link href="https://fonts.googleapis.com/css?family=Kanit:800|Merriweather:300" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header><div id="logo"><span id="m">M<span id="j">J</span></span><span id="g">grocers</span></div></header>
+        <div id="siteNavigation">
+            <span class="nav"><a href="Index.aspx" id="linkHome">Home</a></span>
+            <span class="nav"><asp:HyperLink ID="hlAccount" runat="server" Text="Log In" NavigateUrl="../Login_Page.aspx"></asp:HyperLink></span>
+            <span class="nav"><a href="Browse_Page.aspx">Browse</a></span>
+            <span class="nav"><a href="Lists_Page.aspx">Lists</a></span>
+            <span class="nav"><asp:Button ID="btnLogout" runat="server"  Text="Log Out" OnClick="BtnLogout_Click" /></span>       
+        </div>
+        
+        <section class="sideBar">
+			
+				<asp:ContentPlaceHolder ID="sideBarSection" runat="server"></asp:ContentPlaceHolder>
+			
+        </section>
+        <section class="content">
+            <asp:ContentPlaceHolder id="cpMainContent" runat="server">
+                <p>Welcome to J&M Grocers. Please follow the links above to create a shopping list, an account, or just browse the inventory. Thanks for Visiting</p>
+            </asp:ContentPlaceHolder>
+        </section>
+		<section class="context">
+			
+	            <asp:ContentPlaceHolder id="contextSection" runat="server"></asp:ContentPlaceHolder>
+			
+        </section>   
+        <footer>
+            <p>Copyright 2018 Matt Paulson and James Harder</p>
+        </footer>
+    </form>
+</body>
+</html>
